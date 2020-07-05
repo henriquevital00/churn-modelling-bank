@@ -40,3 +40,13 @@ sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)
 
+#Initializing the ANN
+ann = tf.keras.models.Sequential()
+ann.add(tf.keras.layers.Dense(units=6, activation="relu"))
+
+#Hidden layer
+ann.add(tf.keras.layers.Dense(units=6, activation="relu"))
+
+#Output layer
+ann.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
+
